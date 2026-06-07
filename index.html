@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Juiceme</title>
+  <title>Love Heart</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -257,7 +257,8 @@
     canvas.width = W;
     canvas.height = H;
 
-    const WORD = 'ILY Rasuuu ';
+    const WORD_A = 'I LOVE YOU ';
+    const WORD_B = 'Rasuuu ';
     const FONT_SIZE = 13;
     const NUM_RINGS = 6;
 
@@ -338,6 +339,7 @@
               const x = pts[s - 1].x + frac * dx;
               const y = pts[s - 1].y + frac * dy;
               const angle = Math.atan2(dy, dx);
+              const WORD = r % 2 === 0 ? WORD_A : WORD_B;
               const ch = WORD[(i + r * 4) % WORD.length];
               if (ch !== ' ') {
                 ctx.save();
